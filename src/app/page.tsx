@@ -15,8 +15,12 @@ export default function Home() {
           alt="Pull Up & Hoop"
           width={150}
           height={150}
-          className="mb-6 object-contain"
+          className="mb-2 object-contain"
         />
+
+        <div className="text-6xl my-4" style={{ animation: "bounce-ball 0.8s infinite" }}>
+          🏀
+        </div>
 
         <h1 className="font-display text-7xl sm:text-8xl md:text-9xl text-foreground leading-none tracking-wider">
           PULL UP
