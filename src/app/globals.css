@@ -32,14 +32,25 @@ body {
   color: #2A2A2A;
 }
 
-/* Bouncing ball animation */
+/* Bouncing ball animation - two low, one high, two fast, repeat */
 @keyframes bounce-ball {
-  0%, 100% {
-    transform: translateY(0);
-    animation-timing-function: cubic-bezier(0.2, 0, 1, 1);
-  }
-  50% {
-    transform: translateY(-30px);
-    animation-timing-function: cubic-bezier(0, 0, 0.8, 1);
-  }
+  /* Low bounce 1 */
+  0% { transform: translateY(0); }
+  4% { transform: translateY(-15px); }
+  8% { transform: translateY(0); }
+  /* Low bounce 2 */
+  12% { transform: translateY(-15px); }
+  16% { transform: translateY(0); }
+  /* Hard high bounce */
+  20% { transform: translateY(0); }
+  30% { transform: translateY(-60px); }
+  40% { transform: translateY(0); }
+  /* Fast bounce 1 */
+  43% { transform: translateY(-12px); }
+  46% { transform: translateY(0); }
+  /* Fast bounce 2 */
+  49% { transform: translateY(-12px); }
+  52% { transform: translateY(0); }
+  /* Pause before repeat */
+  52%, 100% { transform: translateY(0); }
 }

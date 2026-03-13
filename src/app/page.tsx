@@ -18,7 +18,7 @@ export default function Home() {
           className="mb-2 object-contain"
         />
 
-        <div className="text-6xl my-4" style={{ animation: "bounce-ball 0.8s infinite" }}>
+        <div className="text-6xl my-4" style={{ animation: "bounce-ball 3s ease-in-out infinite" }}>
           🏀
         </div>
 
