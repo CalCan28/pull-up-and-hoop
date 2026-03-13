@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <div className="min-h-screen relative overflow-hidden">
@@ -8,7 +10,13 @@ export default function Home() {
 
       {/* Hero */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center pt-16">
-        <div className="text-8xl mb-6 animate-bounce">&#127936;</div>
+        <Image
+          src="/logo.png"
+          alt="Pull Up & Hoop"
+          width={150}
+          height={150}
+          className="mb-6 object-contain"
+        />
 
         <h1 className="font-display text-7xl sm:text-8xl md:text-9xl text-foreground leading-none tracking-wider">
           PULL UP
