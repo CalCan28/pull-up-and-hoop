@@ -128,6 +128,38 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Gallery */}
+        <div className="mt-24 max-w-5xl w-full">
+          <h2 className="font-display text-4xl sm:text-5xl text-foreground mb-12 text-center">
+            THE CULTURE
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              { src: "/gallery/hoop-1.jpg", alt: "Pull Up & Hoop - Court scene" },
+              { src: "/gallery/hoop-2.jpg", alt: "Pull Up & Hoop - Dribbling" },
+              { src: "/gallery/hoop-3.jpg", alt: "Pull Up & Hoop - Dunk" },
+              { src: "/gallery/hoop-4.jpg", alt: "Pull Up & Hoop - Crossover" },
+              { src: "/gallery/hoop-5.jpg", alt: "Pull Up & Hoop - Youth game" },
+            ].map((img, i) => (
+              <div
+                key={img.src}
+                className={`relative overflow-hidden rounded-xl border border-surface-light group ${
+                  i === 0 ? "col-span-2 row-span-2" : ""
+                }`}
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  width={600}
+                  height={800}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Stats Strip */}
         <div className="grid grid-cols-3 gap-8 sm:gap-16 mt-24">
           <div className="text-center">
